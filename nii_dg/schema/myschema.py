@@ -2,7 +2,6 @@
 A test set of validation rules for MySchema.
 """
 
-
 import re
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, List
@@ -20,10 +19,6 @@ SCHEMA_NAME = Path(__file__).stem
 SCHEMA_FILE_PATH = Path(__file__).resolve(
 ).parent.joinpath(f"{SCHEMA_NAME}.yml")
 SCHEMA_DEF = load_schema_file(SCHEMA_FILE_PATH)
-
-PACKAGE_INFO_PATH = Path(__file__).resolve(
-).parent.resolve().parent.joinpath("package_info.json")
-
 
 PROHIBITED_WORDS: List[str] = ["danger", "ban", "foo", "bar"]
 
@@ -75,22 +70,6 @@ class MySchema(DataEntity):
         entity_def: EntityDef = SCHEMA_DEF["MySchema"],
     ):
         super().__init__(id_, props, schema_name, entity_def)
-
-        # because the super.__init__() force to set GH_REPO and GH_REF, we should replace them.
-        # package_info: dict = None
-        # with open(PACKAGE_INFO_PATH, "r", encoding="utf-8") as ff:
-        #     package_info = json.load(ff)
-        # repo_owner = package_info.get("REPO_OWNER")
-        # repo_name = package_info.get("REPO_NAME")
-        # gh_repo = ""
-        # if repo_owner is None or repo_name is None:
-        #     gh_repo = GH_REPO
-        # else:
-        #     gh_repo = f"{repo_owner}/{repo_name}"
-        # gh_ref = package_info.get("REPO_REF", GH_REF)
-        # self.data["@context"] = generate_ctx(
-        #     gh_repo, gh_ref, schema_name=schema_name
-        # )
 
     def check_props(self) -> None:
         super().check_props()
