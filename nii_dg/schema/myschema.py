@@ -20,7 +20,7 @@ SCHEMA_FILE_PATH = Path(__file__).resolve(
 ).parent.joinpath(f"{SCHEMA_NAME}.yml")
 SCHEMA_DEF = load_schema_file(SCHEMA_FILE_PATH)
 
-PROHIBITED_WORDS: List[str] = ["danger", "ban", "foo", "bar"]
+PROHIBITED_WORDS: List[str] = ["danger", "ban", "foo", "bar", "hoge"]
 
 
 def is_message(value: str) -> bool:

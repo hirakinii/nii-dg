@@ -20,4 +20,4 @@ MySchema:
       expected_type: str
       required: Optional.
       description: MUST be a string.
-      example: this is a test message.
+      example: this is a test message .
