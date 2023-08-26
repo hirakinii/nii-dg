@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+import json
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, List
 from urllib.request import urlopen
@@ -129,9 +130,9 @@ class Organization(ContextualEntity):
             urllib.error.HTTPError: If the ROR API returns an error.
         """
         with urlopen(f"https://api.ror.org/organizations/{ror_id}") as res:
-            json = res.read().decode("utf-8")
-            name_list = [json["name"]]
-            name_list.extend(json["aliases"])
+            content = json.loads(res.read().decode("utf-8"))
+            name_list = [content["name"]]
+            name_list.extend(content["aliases"])
 
         return name_list
 
