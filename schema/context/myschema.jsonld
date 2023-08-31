@@ -10,6 +10,18 @@
         "url": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MySchema:url",
         "message": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MySchema:message"
       }
+    },
+    "MyOutputSchema": {
+      "@id": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema",
+      "@context": {
+        "@id": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema:@id",
+        "name": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema:name",
+        "contentSize": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema:contentSize",
+        "encodingFormat": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema:encodingFormat",
+        "sha256": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema:sha256",
+        "url": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema:url",
+        "sdDatePublished": "https://raw.githubusercontent.com/hirakinii/nii-dg/demo-myschema-01/nii_dg/schema/myschema.yml#MyOutputSchema:sdDatePublished"
+      }
     }
   }
 }
