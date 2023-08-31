@@ -128,7 +128,7 @@ class MyOutputSchema(DataEntity):
         id_: str,
         props: Dict[str, Any] = {},
         schema_name: str = SCHEMA_NAME,
-        entity_def: EntityDef = SCHEMA_DEF["File"],
+        entity_def: EntityDef = SCHEMA_DEF["MyOutputSchema"],
     ):
         super().__init__(id_, props, schema_name, entity_def)
 
